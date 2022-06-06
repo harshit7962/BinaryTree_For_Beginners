@@ -1,11 +1,15 @@
 # BinaryTree_For_Beginners
 A binary Tree is represented by following structure in all the above programs...
 ```cpp
-void postOrder(Node *root) {
-    if(root!=NULL) {
-        postOrder(root->left);
-        postOrder(root->right);
-        cout << root->key << " ";
+struct Node {
+    int key;
+    Node *left;
+    Node *right;
+    
+    Node(int k) {
+        key  = k;
+        left = NULL;
+        right = NULL;
     }
-}
+};
 ```
