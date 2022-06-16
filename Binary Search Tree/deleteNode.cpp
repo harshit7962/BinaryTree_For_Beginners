@@ -10,8 +10,8 @@ Node *successor(Node *root) {
 // Primary Function
 Node *deleteNode(Node *root, int target) {
     if(root==NULL) return root;
-    if(root->val > target) root->left = deleteNode(root->left);
-    else if(root->val < target) root->right = deleteNode(root->right);
+    if(root->val > target) root->left = deleteNode(root->left, target);
+    else if(root->val < target) root->right = deleteNode(root->right, target);
     else {
         if(root->left == NULL) {
             Node *temp = root->right;
